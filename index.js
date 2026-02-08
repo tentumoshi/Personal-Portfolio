@@ -28,7 +28,7 @@ toggleLightOrDarkBtn.addEventListener('click', () => {
     }
 
 
-    // test
+    
 
     localStorage.setItem('theme', currentTheme);
 });
