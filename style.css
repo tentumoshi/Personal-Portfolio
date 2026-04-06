@@ -1,5 +1,6 @@
 *{
     /* background-color: #f0f0f0; */
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
@@ -56,7 +57,7 @@ button{
     border-radius: 5rem;
 }
 
-.picture{
+.pictures .inner-pictures{
     display: flex;
     justify-content: center;
     align-items: center;
