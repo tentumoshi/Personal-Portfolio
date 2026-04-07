@@ -1,3 +1,14 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+
 *{
     /* background-color: #f0f0f0; */
     scroll-behavior: smooth;
@@ -59,12 +70,14 @@ button{
 }
 
 .center-project .middle-project{
-    /* display: inline-block; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .middle-project .middle-project-title{
-    /* align-items: center; */
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -79,4 +92,12 @@ button{
 .svg-icon{
     width: 5rem;
     height: 5rem;
+}
+
+footer{
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
 }
