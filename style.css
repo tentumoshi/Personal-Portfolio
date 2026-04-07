@@ -58,7 +58,7 @@ button{
     border-radius: 5rem;
 }
 
-.middle-project{
+.center-project .middle-project{
     /* display: inline-block; */
     align-items: center;
 }
