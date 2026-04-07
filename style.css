@@ -58,6 +58,17 @@ button{
     border-radius: 5rem;
 }
 
+.middle-project{
+    /* display: inline-block; */
+    align-items: center;
+}
+
+.middle-project .middle-project-title{
+    /* align-items: center; */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .pictures .inner-pictures{
     display: flex;
     justify-content: center;
