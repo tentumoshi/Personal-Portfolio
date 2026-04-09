@@ -39,14 +39,16 @@ header{
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
-button{
+.nav-bar button{
+    font-weight: 900;
     padding: 10px 20px;
     border: none;
-    background-color: #007BFF;
-    color: white;
+    background: none;  
+    color: black;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 1s ease;
+    /* transition: background-color 1s ease; */
+    position: relative;
 }
 
 #toggleLightDark{
