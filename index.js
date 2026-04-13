@@ -1,34 +1,28 @@
-const toggleLightOrDarkBtn = document.getElementById('toggleLightDark');
-const titleElement = document.querySelector('.title');
+const sunIcon = document.querySelector('.darkMode-svg');
+const moonIcon = document.querySelector('.lightMode-svg');
+
 let currentTheme = localStorage.getItem('theme') || 'light';
 
-
-// alert('Light mode activated');
-if (currentTheme === 'dark') {
-    document.body.style.backgroundColor = '#1a1a1a';
-    toggleLightOrDarkBtn.textContent = 'Light';
-} else {
-    document.body.style.backgroundColor = '#f0f0f0';
-    toggleLightOrDarkBtn.textContent = 'Dark';
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        document.body.style.backgroundColor = '#1a1a1a';
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline';
+    } else {
+        document.body.style.backgroundColor = '#f0f0f0';
+        sunIcon.style.display = 'inline';
+        moonIcon.style.display = 'none';
+    }
 }
 
-toggleLightOrDarkBtn.addEventListener('click', () => {
-    if (currentTheme === 'light') {
-        // titleElement.style.color = 'white';
-        toggleLightOrDarkBtn.textContent = 'Light';
-        document.body.style.backgroundColor = '#1a1a1a';
-        currentTheme = 'dark';
-        // alert('Dark mode activated');
-    } else {
-        // titleElement.style.color = 'black'; asfdsd
-        toggleLightOrDarkBtn.textContent = 'Dark';
-        document.body.style.backgroundColor = '#f0f0f0';
-        currentTheme = 'light';
-        // alert('Light mode activated');
-    }
+// Apply saved theme on load
+applyTheme(currentTheme);
 
-
-    
-
-    localStorage.setItem('theme', currentTheme);
+// Toggle on click — attach to both icons
+[sunIcon, moonIcon].forEach(icon => {
+    icon.addEventListener('click', () => {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        applyTheme(currentTheme);
+        localStorage.setItem('theme', currentTheme);
+    });
 });
