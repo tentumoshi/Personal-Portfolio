@@ -39,6 +39,15 @@ header{
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
+.nav-bar{
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+p{
+    color: black;
+}
 .nav-bar button{
     font-weight: 900;
     padding: 10px 20px;
@@ -49,6 +58,7 @@ header{
     cursor: pointer;
     /* transition: background-color 1s ease; */
     position: relative;
+    
 }
 
 #toggleLightDark{
