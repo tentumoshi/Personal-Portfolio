@@ -59,6 +59,12 @@ p{
     /* transition: background-color 1s ease; */
     position: relative;
     
+    
+}
+
+.nav-bar button:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
 }
 
 #toggleLightDark{
@@ -81,6 +87,38 @@ p{
 .darkMode-svg:hover, .lightMode-svg:hover {
     transform: scale(1.2);
 }
+
+.about-me{
+    margin-top: 5rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    max-width: 60rem ;
+    align-self: center;
+    gap: 10rem;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-me-content h2{
+    font-size: 3rem;
+}
+
+.about-me-content p{
+    font-size: 1.2rem;
+}
+
+.wanbywan{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 5rem;
+    margin-top: 2rem;
+}
+
 
 .filipino{
     max-width: 35rem;
