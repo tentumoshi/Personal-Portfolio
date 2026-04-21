@@ -122,7 +122,7 @@ p{
 .skills{
     display: flex;
     align-items: center;
-    justify-self: center;
+    justify-content: center;
 }
 
 .skill1{
