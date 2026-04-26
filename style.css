@@ -254,9 +254,34 @@ p{
 }
 
 footer{
-    margin-top: auto;
+    margin-top: 15rem;
     background-color: black;
     color: white;
     text-align: center;
     padding: 2rem;
+}
+
+.footer-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-buttons button{
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    font-weight: 400;
+    
+}
+
+.footer-buttons button:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
 }
