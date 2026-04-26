@@ -13,7 +13,7 @@ function applyTheme(theme) {
         progressBar.forEach(circle => circle.style.stroke = '#fff');
         text.forEach(p => p.style.color = 'white');
     } else {
-        document.body.style.backgroundColor = '#f0f0f0';
+        document.body.style.backgroundColor = '#EFE3CA';
         sunIcon.style.display = 'inline';
         moonIcon.style.display = 'none';
         progressBar.forEach(circle => circle.style.stroke = '#000');
