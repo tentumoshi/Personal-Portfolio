@@ -13,7 +13,7 @@ function applyTheme(theme) {
         document.documentElement.style.setProperty('--color-dark-primary', '#07354C');
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline';
-        progressBar.forEach(circle => circle.style.stroke = '#fff');
+        progressBar.forEach(circle => circle.style.stroke = '--color-dark-primary');
         text.forEach(p => p.style.color = 'white');
     } else {
         document.documentElement.style.setProperty('--color-bg', '#D0D1D3');
@@ -22,7 +22,7 @@ function applyTheme(theme) {
         document.documentElement.style.setProperty('--color-dark-primary', '#07354C');
         sunIcon.style.display = 'inline';
         moonIcon.style.display = 'none';
-        progressBar.forEach(circle => circle.style.stroke = '#000');
+        progressBar.forEach(circle => circle.style.stroke = '--color-primary');
         text.forEach(p => p.style.color = 'black');
     }
 }
