@@ -1,3 +1,13 @@
+:root{
+    --color-primary:     #2C576A;
+    --color-dark-primary:#07354C;
+    --color-bg:          #141A20;
+    --color-muted:       #45525A;
+    --color-gray:        #6F7375;
+    --color-light-gray:  #828D96;
+    --color-text:        #D0D1D3;
+}
+
 html, body{
     height: 100%;
 }
@@ -6,6 +16,8 @@ body{
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 
@@ -18,13 +30,15 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+/* HEADER */
 header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: #007BFF;
     padding: 5rem;
-    background: linear-gradient(360deg, rgba(217, 217, 199, 1) 20%, rgba(40, 189, 169, 1) 97%);
+    background: linear-gradient(360deg, var(--color-dark-primary) 20%, var(--color-primary) 97%);
 }
 
 .titleAndLogo{
@@ -35,7 +49,7 @@ header{
 
 .title{
     font-size: 3rem;
-    color: black;
+    color: var(--color-text);
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
@@ -46,14 +60,14 @@ header{
 }
 
 p{
-    color: black;
+    color: var(--color-light-gray);
 }
 .nav-bar button{
     font-weight: 900;
     padding: 10px 20px;
     border: none;
     background: none;  
-    color: black;
+    color: var(--color-text);
     border-radius: 5px;
     cursor: pointer;
     /* transition: background-color 1s ease; */
@@ -106,10 +120,12 @@ p{
 
 .about-me-content h2{
     font-size: 3rem;
+    color: var(--color-text);
 }
 
 .about-me-content p{
     font-size: 1.2rem;
+    color: var(--color-light-gray);
 }
 
 .wanbywan{
@@ -117,21 +133,36 @@ p{
     height: 20rem;
     border-radius: 5rem;
     margin-top: 2rem;
+    border: 3px solid var(--color-primary);
+}
+
+.skillset-header{
+    font-size: 3rem;
+    margin-top: 5rem;
+    align-self: center;
+    color: var(--color-text);
 }
 
 .skills{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;       /* add this */
+    max-width: 900px;      /* add this — locks 3 per row */
+    align-self: center;
 }
 
 .skill1,
 .skill2,
-.skill3
+.skill3,
+.skill4,
+.skill5,
+.skill6
  {
+    fill: none;
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,56 +198,63 @@ p{
 .skills h2{
     font-size: 1.5rem;
     font-weight: 300;
+    color: var(--color-text);
 }
 
 .skills .progress-title{
     font-weight: 900;
+    color: var(--color-light-gray);
 }
 
-.HTML-circle{
-    fill: none;
+
+/* for every attribute that every bar has in common */
+.HTML-circle,
+.CSS-circle,
+.JavaScript-circle,
+.Java-circle,
+.Python-circle,
+.Cpp-circle{
     width: 150px;
     height: 150px;
     stroke-width: 10;
-    stroke: #000;
+    /* stroke: #000; */
     transform-box: fill-box;
     transform-origin: center;
     transform: rotate(90deg) translate(5px, 5px);
     stroke-width: 4;
     stroke-dasharray: 377;
+}
+
+/* individual percentage */
+.HTML-circle{
     stroke-dashoffset: calc(377 * 0.55);
+    stroke: var(--color-primary);
 }
 
 .CSS-circle{
-    fill: none;
-    width: 150px;
-    height: 150px;
-    stroke-width: 10;
-    stroke: #000;
-    transform-box: fill-box;
-    transform-origin: center;
-    transform: rotate(90deg) translate(5px, 5px);
-    stroke-width: 4;
-    stroke-dasharray: 377;
     stroke-dashoffset: calc(377 * 0.55);
+    stroke: var(--color-primary);
 }
 
 .JavaScript-circle{
-    fill: none;
-    width: 150px;
-    height: 150px;
-    stroke-width: 10;
-    stroke: #000;
-    transform-box: fill-box;
-    transform-origin: center;
-    transform: rotate(90deg) translate(5px, 5px);
-    stroke-width: 4;
-    stroke-dasharray: 377;
     stroke-dashoffset: calc(377 * 0.82);
+    stroke: var(--color-primary);
 }
 
+.Java-circle{
+    stroke-dashoffset: calc(377 * 0.70);
+    stroke: var(--color-primary);
+}
 
+.Python-circle{
+    stroke-dashoffset: calc(377 * 0.90);
+    stroke: var(--color-primary);
+}
 
+.Cpp-circle{
+    stroke-dashoffset: calc(377 * 0.75);
+    stroke: var(--color-primary);
+}
 
 .filipino{
     max-width: 35rem;
@@ -226,6 +264,7 @@ p{
     height: 20rem;
     min-width: 20rem;
     border-radius: 5rem;
+    border: 3px solid var(--color-muted);
 }
 
 .center-project .middle-project{
@@ -239,6 +278,7 @@ p{
 .middle-project .middle-project-title{
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--color-text);
 }
 
 .pictures .inner-pictures{
@@ -255,10 +295,11 @@ p{
 
 footer{
     margin-top: 15rem;
-    background-color: black;
+    background-color: var(--color-dark-primary);
     color: white;
     text-align: center;
     padding: 2rem;
+    border-top: 2px solid var(--color-primary)
 }
 
 .footer-buttons{
@@ -276,7 +317,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items:center;
-    color: white;
+    color: var(--color-light-gray);
     font-weight: 400;
     
 }
@@ -284,4 +325,5 @@ footer{
 .footer-buttons button:hover{
     transform: scale(1.2);
     transition: transform 0.2s ease;
+    color: var(--color-text);
 }
