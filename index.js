@@ -7,13 +7,19 @@ let currentTheme = localStorage.getItem('theme') || 'light';
 
 function applyTheme(theme) {
     if (theme === 'dark') {
-        document.body.style.backgroundColor = '#1a1a1a';
+        document.documentElement.style.setProperty('--color-bg', '#141A20');
+        document.documentElement.style.setProperty('--color-text', '#D0D1D3');
+        document.documentElement.style.setProperty('--color-primary', '#2C576A');
+        document.documentElement.style.setProperty('--color-dark-primary', '#07354C');
         sunIcon.style.display = 'none';
         moonIcon.style.display = 'inline';
         progressBar.forEach(circle => circle.style.stroke = '#fff');
         text.forEach(p => p.style.color = 'white');
     } else {
-        document.body.style.backgroundColor = '#EFE3CA';
+        document.documentElement.style.setProperty('--color-bg', '#D0D1D3');
+        document.documentElement.style.setProperty('--color-text', '#141A20');
+        document.documentElement.style.setProperty('--color-primary', '#2C576A');
+        document.documentElement.style.setProperty('--color-dark-primary', '#07354C');
         sunIcon.style.display = 'inline';
         moonIcon.style.display = 'none';
         progressBar.forEach(circle => circle.style.stroke = '#000');

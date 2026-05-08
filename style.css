@@ -81,15 +81,6 @@ p{
     transition: transform 0.2s ease;
 }
 
-#toggleLightDark{
-    padding: 5px 5px;
-    border: none;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    /* transition: background-color 0.3s ease; */
-}
 
 .darkMode-svg, .lightMode-svg{
     width: 1.5rem;
@@ -140,7 +131,7 @@ p{
     font-size: 3rem;
     margin-top: 5rem;
     align-self: center;
-    color: var(--color-text);
+    color: black;
 }
 
 .skills{
@@ -216,7 +207,6 @@ p{
 .Cpp-circle{
     width: 150px;
     height: 150px;
-    stroke-width: 10;
     /* stroke: #000; */
     transform-box: fill-box;
     transform-origin: center;
