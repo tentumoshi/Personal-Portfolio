@@ -109,7 +109,7 @@ p{
     gap: 2rem;
 }
 
-.about-me-content h2{
+.about-me-content{
     font-size: 3rem;
     color: var(--color-text);
 }
@@ -127,7 +127,7 @@ p{
     border: 3px solid var(--color-primary);
 }
 
-.skillset-header{
+.skillset-header, .projects-header{
     font-size: 3rem;
     margin-top: 5rem;
     align-self: center;
