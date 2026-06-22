@@ -251,14 +251,19 @@ p{
     object-fit: cover;
     display: block;
     border-radius: 3rem;
-    border: 3px solid var(--color-muted);
+    /* border: 3px solid var(--color-muted); */
     transition: transform 0.3s ease;    /* move up animation */
 }
 
-.codearcadia-card img {
-    background-color: var(--color-dark-primary);
-    object-fit: contain;   /* keeps logo fully visible instead of cropping */
+.codearcadia-card img{
+    object-fit: contain;
 }
+
+.reactjs-card img{
+    background-color: var(--color-bgprimary);
+}
+
+
 
 /* image slides up on hover */
 .project-card:hover img {
