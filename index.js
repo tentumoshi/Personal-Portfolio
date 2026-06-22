@@ -39,8 +39,11 @@ applyTheme(currentTheme);
     });
 });
 
+/* ===================PROGRESS BAR STARTUP ANIMATIONS===================*/
+
 const circles = document.querySelectorAll('.HTML-circle, .CSS-circle, .JavaScript-circle, .Java-circle, .Python-circle, .Cpp-circle');
 
+// target percentage of progress bars
 const targets = {
     'HTML-circle':       0.45,
     'CSS-circle':        0.45,

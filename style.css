@@ -198,16 +198,6 @@ p{
     color: var(--color-light-gray);
 }
 
-/* ===================PROGRESS BAR STARTUP ANIMATIONS===================*/
-
-/* @keyframes fillBar {
-    from {
-        stroke-dashoffset: 377;
-    }
-    to {
-        stroke-dashoffset: var(--target-offset);
-    }
-} */
 
 /* for every attribute that every percentage bar has in common */
 .HTML-circle,
@@ -223,55 +213,13 @@ p{
     transform-origin: center;
     transform: rotate(90deg) translate(5px, 5px);
     stroke-width: 4;
-    stroke-dasharray: 377;
-    /* stroke: var(--color-primary);
-    animation: fillBar 1.2s ease-out forwards; */
+    stroke: var(--color-primary);
+    
 }
 
-/* individual percentage
-.HTML-circle{
-    --target-offset: calc(377 * 0.55);
-    animation-delay: 0.1s;
-}
 
-.CSS-circle{
-    --target-offset: calc(377 * 0.55);
-    animation-delay: 0.2s;
-}
 
-.JavaScript-circle{
-    --target-offset: calc(377 * 0.82);
-    animation-delay: 0.3s;
-}
-
-.Java-circle{
-    --target-offset: calc(377 * 0.70);
-    animation-delay: 0.4s;
-}
-
-.Python-circle{
-    --target-offset: calc(377 * 0.90);
-    animation-delay: 0.5s;
-}
-
-.Cpp-circle{
-    --target-offset: calc(377 * 0.75);
-    animation-delay: 0.6s;
-}
-
- /* initial hidden state (so bars start empty during their delay) */
-
- /*
-.HTML-circle,
-.CSS-circle,
-.JavaScript-circle,
-.Java-circle,
-.Python-circle,
-.Cpp-circle{
-    stroke-dashoffset: 377;
-} */
-
-.filipino{
+.codearcadia{
     max-width: 35rem;
     align-self: center;
     margin-top: 5rem;
@@ -282,7 +230,7 @@ p{
     border: 3px solid var(--color-muted);
 }
 
-.pictures .inner-pictures{
+.logos .inner-pictures{
     display: flex;
     justify-content: center;
     align-items: center;
