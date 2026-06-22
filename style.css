@@ -133,7 +133,6 @@ p{
     font-size: 3rem;
     margin-top: 5rem;
     align-self: center;
-    color: black;
 }
 
 .skills{
@@ -199,8 +198,18 @@ p{
     color: var(--color-light-gray);
 }
 
+/* ===================PROGRESS BAR STARTUP ANIMATIONS===================*/
 
-/* for every attribute that every bar has in common */
+@keyframes fillBar {
+    from {
+        stroke-dashoffset: 377;
+    }
+    to {
+        stroke-dashoffset: var(--target-offset);
+    }
+}
+
+/* for every attribute that every percentage bar has in common */
 .HTML-circle,
 .CSS-circle,
 .JavaScript-circle,
@@ -215,37 +224,49 @@ p{
     transform: rotate(90deg) translate(5px, 5px);
     stroke-width: 4;
     stroke-dasharray: 377;
+    stroke: var(--color-primary);
+    animation: fillBar 1.2s ease-out forwards;
 }
 
 /* individual percentage */
 .HTML-circle{
-    stroke-dashoffset: calc(377 * 0.55);
-    stroke: var(--color-primary);
+    --target-offset: calc(377 * 0.55);
+    animation-delay: 0.1s;
 }
 
 .CSS-circle{
-    stroke-dashoffset: calc(377 * 0.55);
-    stroke: var(--color-primary);
+    --target-offset: calc(377 * 0.55);
+    animation-delay: 0.2s;
 }
 
 .JavaScript-circle{
-    stroke-dashoffset: calc(377 * 0.82);
-    stroke: var(--color-primary);
+    --target-offset: calc(377 * 0.82);
+    animation-delay: 0.3s;
 }
 
 .Java-circle{
-    stroke-dashoffset: calc(377 * 0.70);
-    stroke: var(--color-primary);
+    --target-offset: calc(377 * 0.70);
+    animation-delay: 0.4s;
 }
 
 .Python-circle{
-    stroke-dashoffset: calc(377 * 0.90);
-    stroke: var(--color-primary);
+    --target-offset: calc(377 * 0.90);
+    animation-delay: 0.5s;
 }
 
 .Cpp-circle{
-    stroke-dashoffset: calc(377 * 0.75);
-    stroke: var(--color-primary);
+    --target-offset: calc(377 * 0.75);
+    animation-delay: 0.6s;
+}
+
+ /* initial hidden state (so bars start empty during their delay) */
+.HTML-circle,
+.CSS-circle,
+.JavaScript-circle,
+.Java-circle,
+.Python-circle,
+.Cpp-circle{
+    stroke-dashoffset: 377;
 }
 
 .filipino{
@@ -257,20 +278,6 @@ p{
     min-width: 20rem;
     border-radius: 5rem;
     border: 3px solid var(--color-muted);
-}
-
-.center-project .middle-project{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.middle-project .middle-project-title{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-text);
 }
 
 .pictures .inner-pictures{
