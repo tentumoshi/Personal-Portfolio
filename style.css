@@ -200,14 +200,14 @@ p{
 
 /* ===================PROGRESS BAR STARTUP ANIMATIONS===================*/
 
-@keyframes fillBar {
+/* @keyframes fillBar {
     from {
         stroke-dashoffset: 377;
     }
     to {
         stroke-dashoffset: var(--target-offset);
     }
-}
+} */
 
 /* for every attribute that every percentage bar has in common */
 .HTML-circle,
@@ -224,11 +224,11 @@ p{
     transform: rotate(90deg) translate(5px, 5px);
     stroke-width: 4;
     stroke-dasharray: 377;
-    stroke: var(--color-primary);
-    animation: fillBar 1.2s ease-out forwards;
+    /* stroke: var(--color-primary);
+    animation: fillBar 1.2s ease-out forwards; */
 }
 
-/* individual percentage */
+/* individual percentage
 .HTML-circle{
     --target-offset: calc(377 * 0.55);
     animation-delay: 0.1s;
@@ -260,6 +260,8 @@ p{
 }
 
  /* initial hidden state (so bars start empty during their delay) */
+
+ /*
 .HTML-circle,
 .CSS-circle,
 .JavaScript-circle,
@@ -267,7 +269,7 @@ p{
 .Python-circle,
 .Cpp-circle{
     stroke-dashoffset: 377;
-}
+} */
 
 .filipino{
     max-width: 35rem;

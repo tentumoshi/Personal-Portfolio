@@ -38,3 +38,30 @@ applyTheme(currentTheme);
         localStorage.setItem('theme', currentTheme);
     });
 });
+
+const circles = document.querySelectorAll('.HTML-circle, .CSS-circle, .JavaScript-circle, .Java-circle, .Python-circle, .Cpp-circle');
+
+const targets = {
+    'HTML-circle':       0.45,
+    'CSS-circle':        0.45,
+    'JavaScript-circle': 0.18,
+    'Java-circle':       0.30,
+    'Python-circle':     0.10,
+    'Cpp-circle':        0.25,
+};
+
+const circumference = 377;
+
+circles.forEach((circle, i) => {
+    const className = [...circle.classList].find(c => targets[c]);
+    const fillPercent = targets[className];
+    const targetOffset = circumference * (1 - fillPercent);
+
+    circle.style.strokeDasharray = circumference;
+    circle.style.strokeDashoffset = circumference; // start empty
+
+    setTimeout(() => {
+        circle.style.transition = 'stroke-dashoffset 1.2s ease-out';
+        circle.style.strokeDashoffset = targetOffset;
+    }, 100 + i * 100); // staggered delay
+});
