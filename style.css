@@ -252,13 +252,12 @@ p{
     display: block;
     border-radius: 3rem;
     border: 3px solid var(--color-muted);
-    transition: transform 0.3s ease;    /* animates the move up */
+    transition: transform 0.3s ease;    /* move up animation */
 }
 
 .codearcadia-card img {
     background-color: var(--color-dark-primary);
     object-fit: contain;   /* keeps logo fully visible instead of cropping */
-    padding: 1rem;
 }
 
 /* image slides up on hover */
