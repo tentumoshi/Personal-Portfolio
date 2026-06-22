@@ -234,9 +234,11 @@ p{
     position: relative;
     width: 20rem;
     height: 20rem;
+    min-width: 20rem;  
+    min-height: 20rem;
     border-radius: 3rem;
     overflow: visible;          /* changed from hidden so image can move up */
-    border: 3px solid var(--color-muted);
+    border: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -249,7 +251,14 @@ p{
     object-fit: cover;
     display: block;
     border-radius: 3rem;
+    border: 3px solid var(--color-muted);
     transition: transform 0.3s ease;    /* animates the move up */
+}
+
+.codearcadia-card img {
+    background-color: var(--color-dark-primary);
+    object-fit: contain;   /* keeps logo fully visible instead of cropping */
+    padding: 1rem;
 }
 
 /* image slides up on hover */
