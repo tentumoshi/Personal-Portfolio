@@ -1,3 +1,4 @@
+/* v.2 */
 const sunIcon = document.querySelector('.darkMode-svg');
 const moonIcon = document.querySelector('.lightMode-svg');
 const progressBar = document.querySelectorAll('circle');
