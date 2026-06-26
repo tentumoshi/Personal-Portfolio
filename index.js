@@ -1,9 +1,6 @@
-/* v.2 */
 const sunIcon = document.querySelector('.darkMode-svg');
 const moonIcon = document.querySelector('.lightMode-svg');
 const progressBar = document.querySelectorAll('circle');
-
-const reactjs_card_bg = document.querySelector('.project-card.reactjs-card img');
 
 const text = document.querySelectorAll('span, p, h2, h3, h4, h5, h6');
 
@@ -26,16 +23,15 @@ function applyTheme(theme) {
         moonIcon.style.display = 'none';
         progressBar.forEach(circle => circle.style.stroke = '--color-primary');
 
-        reactjs_card_bg.style.backgroundColor = '#141A20';
 
         text.forEach(p => p.style.color = 'black');
     }
 }
 
-// Apply saved theme on load
+// apply saved theme on load
 applyTheme(currentTheme);
 
-// Toggle on click — attach to both icons
+// toggle on click, attach to both icons
 [sunIcon, moonIcon].forEach(icon => {
     icon.addEventListener('click', () => {
         currentTheme = currentTheme === 'light' ? 'dark' : 'light';
